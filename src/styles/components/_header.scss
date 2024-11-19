@@ -1,0 +1,91 @@
+.header {
+    @include flex-center;
+
+    justify-content: space-between;
+    width: 100%;
+    padding: 24px;
+
+    &__navigation {
+        @include flex-center;
+
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+    }
+
+    .button {
+        transition: transform 0.3s ease-in-out;
+
+        @include hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.navigation {
+    &__left {
+        @include flex-center;
+
+        justify-content: flex-start;
+        padding-right: 12px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__right {
+        @include flex-center;
+
+        justify-content: flex-end;
+        flex-grow: 1;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__container,
+    &__avatar {
+        @include flex-center;
+    }
+
+    &__container {
+        margin-right: 8vw;
+    }
+
+    &__info {
+        margin-left: 12px;
+    }
+
+    &__icons {
+        @include flex-center;
+
+        gap: 8px;
+        margin-left: 240px;
+    }
+
+    &__button {
+        margin: 12px;
+    }
+}
+
+.info {
+    &__name {
+        @include fluid-text(24, 8);
+
+        color: $text-color;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    &__status {
+        @include fluid-text(16, 6);
+
+        color: $text-color-alt;
+        font-weight: lighter;
+    }
+}
+
+.notify {
+    margin-right: 24px;
+    margin-top: 6px;
+    padding-left: 12px;
+    height: 100%;
+}
